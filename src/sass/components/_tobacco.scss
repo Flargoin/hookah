@@ -1,0 +1,14 @@
+.tobacco {
+    padding: 42px 0;
+    height: 100%;
+    background: linear-gradient(180deg, #FBFCFE 0%, #FFFFFF 100%);
+    &__container {
+        position: relative;
+    }
+    &__inner {
+        margin-top: 33px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+}

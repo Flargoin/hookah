@@ -1,0 +1,91 @@
+@import 'lib/normalize.scss';
+
+@import 'base/fonts.scss';
+@import 'base/variables.scss';
+@import 'base/mixins.scss';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'TT Norms', sans-serif;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+svg {
+    fill: transparent;
+}
+
+.divider {
+    width: 60px;
+    height: 1px;
+    background-color: #9CABFF;
+    margin: 23px auto 0 auto;
+}
+.more {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--color-primary);
+    &:hover {
+        text-decoration: underline;
+    }
+}
+@import 'components/title.scss';
+@import 'components/btn.scss';
+@import 'components/header.scss';
+@import 'components/dropdown.scss';
+@import 'components/hero.scss';
+@import 'components/card.scss';
+@import 'components/tobacco.scss';
+@import 'components/create.scss';
+@import 'components/mix.scss';
+@import 'components/launge.scss';
+@import 'components/footer.scss';
