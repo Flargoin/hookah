@@ -1,0 +1,44 @@
+/* Smoke */
+
+@keyframes smokeScale {
+    0% {
+        transform: scale(0.7) translateX(-50%) rotate(25deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.1) translateX(-50%) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Hero text */
+@keyframes leftToRightText {
+    0% {
+        position: relative;
+        left: -100%;
+    }
+    100% {
+        position: relative;
+        left: 0;
+    }
+}
+
+@keyframes rightToLeftText {
+    0% {
+        position: relative;
+        right: -100%;
+    }
+    100% {
+        position: relative;
+        right: 0;
+    }
+}

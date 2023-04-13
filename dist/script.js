@@ -96,11 +96,14 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_dropdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/dropdown */ "./src/js/modules/dropdown.js");
+/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/header */ "./src/js/modules/header.js");
+
 
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   Object(_modules_dropdown__WEBPACK_IMPORTED_MODULE_0__["default"])('.header__dropdown', '.dropdown__menu', 'dropdown__menu-active', 'header__dropdown-active');
+  Object(_modules_header__WEBPACK_IMPORTED_MODULE_1__["default"])();
 });
 
 /***/ }),
@@ -145,6 +148,38 @@ const dropdown = function (trigger, menuSelector, activeClass, aniClass) {
   });
 };
 /* harmony default export */ __webpack_exports__["default"] = (dropdown);
+
+/***/ }),
+
+/***/ "./src/js/modules/header.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/header.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const header = function () {
+  const header = document.querySelector('.header'),
+    hero = document.querySelector('.hero'),
+    heroHeight = hero.style.height;
+  document.addEventListener('scroll', () => {
+    console.log(document.documentElement.scrollTop);
+    if (document.documentElement.scrollTop > '700') {
+      header.style.backgroundColor = '#fff';
+      header.querySelector('.header__container').style.backgroundColor = '#fff';
+      header.style.boxShadow = '0px 16px 20px rgba(0, 0, 0, 0.03)';
+      document.querySelectorAll('.dropdown__menu').forEach(item => item.style.backgroundColor = '#fff');
+    } else {
+      header.style.backgroundColor = '';
+      header.querySelector('.header__container').style.backgroundColor = '';
+      header.style.boxShadow = '';
+      document.querySelectorAll('.dropdown__menu').forEach(item => item.style.backgroundColor = '');
+    }
+  });
+};
+/* harmony default export */ __webpack_exports__["default"] = (header);
 
 /***/ })
 

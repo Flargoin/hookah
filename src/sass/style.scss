@@ -3,6 +3,7 @@
 @import 'base/fonts.scss';
 @import 'base/variables.scss';
 @import 'base/mixins.scss';
+@import 'base/animation.scss';
 
 
 * {
@@ -84,6 +85,7 @@ svg {
 @import 'components/dropdown.scss';
 @import 'components/hero.scss';
 @import 'components/card.scss';
+@import 'components/tag.scss';
 @import 'components/tobacco.scss';
 @import 'components/create.scss';
 @import 'components/mix.scss';

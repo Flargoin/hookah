@@ -363,10 +363,52 @@ template {
   --color-primary: #A1C4FD;
   --color-simple: #010624;
   --color-placeholder: #C4C4C4;
+  /* Background color */
+  --background-hero: #ECF2F8;
   /* Font */
   --font-main: "TT Norms", sans-serif;
 }
 
+/* Smoke */
+@keyframes smokeScale {
+  0% {
+    transform: scale(0.7) translateX(-50%) rotate(25deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.1) translateX(-50%) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Hero text */
+@keyframes leftToRightText {
+  0% {
+    position: relative;
+    left: -100%;
+  }
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+@keyframes rightToLeftText {
+  0% {
+    position: relative;
+    right: -100%;
+  }
+  100% {
+    position: relative;
+    right: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -473,15 +515,16 @@ svg {
   position: sticky;
   top: 0;
   left: 50%;
-  background-color: #ECF2F8;
-  /* box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.03); */
+  transition: background-color 0.4s, box-shadow 0.4s;
+  background-color: var(--background-hero);
   z-index: 10;
 }
 .header__container {
-  padding: 23px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: background-color 0.4s;
+  background-color: var(--background-hero);
 }
 .header__nav {
   max-width: 950px;
@@ -546,7 +589,8 @@ svg {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: #fff;
+  transition: background-color 0.4s;
+  background-color: var(--background-hero);
   border-top: 1px solid #EDECEF;
   transition: top 0.6s;
   z-index: -1;
@@ -594,7 +638,8 @@ svg {
   line-height: 21px;
   text-align: center;
   color: var(--color-primary);
-  background-color: #fff;
+  transition: background-color 0.4s;
+  background-color: var(--background-hero);
 }
 .dropdown__other:after {
   content: "";
@@ -674,17 +719,39 @@ svg {
 .hero {
   position: relative;
   width: 100%;
-  height: calc(100vh - 90.7px);
-  background-color: #ECF2F8;
+  min-height: 722px;
+  background-color: var(--background-hero);
 }
 .hero__container {
   max-width: 992px;
+  height: 100%;
   margin: 0 auto;
+}
+.hero__container:after, .hero__container:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 512px;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  background-image: url("../icons/smoke-left.png");
+  z-index: 1;
+}
+.hero__container:before {
+  left: auto;
+  right: 0;
+  background-image: url("../icons/smoke-right.png");
 }
 .hero__promo {
   width: 100%;
   padding-top: 120px;
   overflow: hidden;
+  animation-name: opacity;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
 }
 .hero__promo-sup {
   font-weight: 400;
@@ -734,18 +801,86 @@ svg {
   height: 732px;
 }
 .hero__promo-smoke {
-  top: 240px;
-  transform: translateX(-50%) rotate(30deg);
+  top: 280px;
+  animation-name: smokeScale;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  z-index: 2;
+}
+.hero__descr {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #010624;
+  z-index: 2;
+}
+.hero__descr-left {
+  margin-left: 50px;
+  max-width: 363px;
+  text-align: right;
+  animation-name: leftToRightText;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+.hero__descr-right {
+  margin-top: 64px;
+  max-width: 410px;
+  text-align: left;
+  animation-name: rightToLeftText;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+.hero__descr-left svg, .hero__descr-right svg {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  z-index: -1;
+}
+.hero__descr-left svg, .hero__descr-right svg {
+  width: 100%;
+  position: relative;
+  top: 100px;
+  left: 35px;
+}
+.hero__descr-link {
+  display: inline-block;
+  margin-top: 35px;
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--color-primary);
+}
+.hero__descr-link svg {
+  position: absolute;
+  top: -10px;
+  left: auto;
+  right: -180px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  bottom: -41%;
+  left: 50%;
+  width: 428px;
+  height: 428px;
+  transform: translate(-50%, -41%);
+  background-image: url("../icons/quad.svg");
+  z-index: -1;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  height: 100%;
   padding-bottom: 20px;
-  max-width: 24%;
+  max-width: 275px;
   width: 100%;
-  min-height: 350px;
   border-radius: 8px;
   overflow: hidden;
   background: #FFFFFF;
@@ -753,15 +888,11 @@ svg {
 }
 .card__content {
   padding: 0 15px;
-  margin-top: 5px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
 }
 .card__img {
   width: 100%;
-  height: 210px;
+  height: 248px;
   object-fit: contain;
 }
 .card__title {
@@ -771,27 +902,28 @@ svg {
   color: var(--color-primary);
 }
 .card__descr {
-  height: 100%;
-  display: flex;
-  flex-grow: 1;
   font-weight: 400;
   font-size: 20px;
   color: #000000;
 }
 .card__taste {
-  height: 100%;
-  padding-top: 12px;
+  padding-top: 9px;
   margin-top: 17px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  flex-grow: 1;
   border-top: 1px solid #EDECEF;
 }
-.card__taste span {
+.card:hover {
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.05);
+  transform: scale(1.05);
+}
+
+.tag {
+  display: block;
   margin-top: 5px;
-  padding: 5px;
-  margin-right: 5px;
+  padding: 5px 10px;
+  margin-left: 8px;
   background: #F2F6FA;
   border-radius: 50px;
   font-weight: 400;
@@ -799,18 +931,11 @@ svg {
   text-align: center;
   color: #868686;
 }
-.card__taste svg {
-  margin-right: 10px;
-}
-.card:hover {
-  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.05);
-  transform: scale(1.05);
-}
 
 .tobacco {
-  padding: 42px 0;
+  padding-top: 207px;
+  padding-bottom: 42px;
   height: 100%;
-  background: linear-gradient(180deg, #FBFCFE 0%, #FFFFFF 100%);
 }
 .tobacco__container {
   position: relative;
@@ -818,7 +943,7 @@ svg {
 .tobacco__inner {
   margin-top: 33px;
   display: flex;
-  align-items: stretch;
+  align-items: baseline;
   justify-content: space-between;
 }
 

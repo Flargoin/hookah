@@ -293,11 +293,10 @@
     
         <main class="main">
             <section class="hero">
+                <h1 class="hero__title visually-hidden">
+                    Приветствуем на HOOKAH PORTAL
+                </h1>
                 <div class="container hero__container">
-                    <h1 class="hero__title visually-hidden">
-                        Приветствуем на HOOKAH PORTAL
-                    </h1>
-        
                     <div class="hero__promo">
                         <div class="hero__promo-sup">Приветствуем на</div>
                         <div class="hero__promo-text">
@@ -305,10 +304,24 @@
                             <div>HOOKAH</div>
                         </div>
                         <div class="hero__promo-sub">PORTAL</div>
-        
-        
                         <img src="/images/hero/1.png" alt="hero-bg" class="hero__promo-img">
-                        <img src="/images/hero/smoke-main.png" alt="smoke" class="hero__promo-smoke">
+                        <img src="/icons/smoke.png" alt="smoke" class="hero__promo-smoke">
+                    </div>
+                </div>
+                <div class="hero__descr">
+                    <div class="hero__descr-left">
+                        <svg width="109" height="98"><use xlink:href="sprite.svg#decor-title"></use></svg>
+                        Здесь ты найдешь 
+                        миксы на любой вкус
+                        <a href="#" class="hero__descr-link">
+                            В каталог табаков
+                            <svg width="109" height="98"><use xlink:href="sprite.svg#link"></use></svg>
+                        </a>
+                    </div>
+                    <div class="hero__descr-right">
+                        <svg width="109" height="98"><use xlink:href="sprite.svg#decor-title"></use></svg>
+                        И сможешь поделиться 
+                        своими миксами
                     </div>
                 </div>
             </section>
@@ -332,9 +345,9 @@
                                 <div class="tobacco__item-descr card__descr">Южный вайб</div>
                                 <div class="tobacco__item-taste card__taste">
                                     <svg width="12" height="12"><use xlink:href="sprite.svg#tobacco-icon"></use></svg>
-                                    <span>Груша</span>
-                                    <span>Манго</span>
-                                    <span>+2</span>
+                                    <span class="tag card__tag">Груша</span>
+                                    <span class="tag card__tag">Манго</span>
+                                    <span class="tag card__tag">+2</span>
                                 </div>
                             </div>
                         </div>
@@ -346,36 +359,37 @@
                                 <div class="tobacco__item-descr card__descr">Pomegranate </div>
                                 <div class="tobacco__item-taste card__taste">
                                     <svg width="12" height="12"><use xlink:href="sprite.svg#tobacco-icon"></use></svg>
-                                    <span>Груша</span>
-                                    <span>Манго</span>
-                                    <span>+3</span>
+                                    <span class="tag card__tag">Груша</span>
+                                    <span class="tag card__tag">Манго</span>
+                                    <span class="tag card__tag">Лед</span>
+                                    <span class="tag card__tag">Вкус табака</span>
+                                    <span class="tag card__tag">Выпечка</span>
                                 </div>
                             </div>
                         </div>
         
                         <div class="tobacco__item card">
-                            <img class="tobacco__item-img card__img" src="images/tobacco/ilt1.png" alt="tobacco-good">
+                            <img class="tobacco__item-img card__img" src="images/tobacco/darkside1.png" alt="tobacco-good">
                             <div class="tobacco__item-content card__content">
-                                <h3 class="tobacco__item-title card__title">Tangiers Special</h3>
-                                <div class="tobacco__item-descr card__descr">ILT One Breakfast Cereal</div>
+                                <h3 class="tobacco__item-title card__title">Darkside</h3>
+                                <div class="tobacco__item-descr card__descr">Южный вайб</div>
                                 <div class="tobacco__item-taste card__taste">
                                     <svg width="12" height="12"><use xlink:href="sprite.svg#tobacco-icon"></use></svg>
-                                    <span>Груша</span>
-                                    <span>Манго</span>
-                                    <span>+5</span>
+                                    <span class="tag card__tag">Груша</span>
+                                    <span class="tag card__tag">Манго</span>
+                                    <span class="tag card__tag">+5</span>
                                 </div>
-        
                             </div>
                         </div>
         
                         <div class="tobacco__item card">
-                            <img class="tobacco__item-img card__img" src="images/tobacco/duft1.png" alt="tobacco-good"> 
+                            <img class="tobacco__item-img card__img" src="images/tobacco/duft1.png" alt="tobacco-good">
                             <div class="tobacco__item-content card__content">
                                 <h3 class="tobacco__item-title card__title">duft</h3>
                                 <div class="tobacco__item-descr card__descr">Pomegranate </div>
                                 <div class="tobacco__item-taste card__taste">
                                     <svg width="12" height="12"><use xlink:href="sprite.svg#tobacco-icon"></use></svg>
-                                    <span>Груша</span>
+                                    <span class="tag card__tag">Груша</span>
                                 </div>
                             </div>
                         </div>
@@ -550,7 +564,7 @@
             </section>
         </main>
     
-        <footer class="footer">
+<!--         <footer class="footer">
             <div class="container">
                 <div class="footer__top">
                     <ul class="footer__list">
@@ -585,7 +599,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
     </div>
 
     <script src='script.js'></script>

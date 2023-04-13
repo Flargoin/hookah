@@ -2,14 +2,15 @@
     position: sticky;
     top: 0;
     left: 50%;
-    background-color: #ECF2F8;
-    /* box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.03); */
+    transition: background-color 0.4s, box-shadow 0.4s;
+    background-color: var(--background-hero);
     z-index: 10;
     &__container {
-        padding: 23px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        transition: background-color 0.4s;
+        background-color: var(--background-hero);
     }
     &__nav {
         max-width: 950px;
