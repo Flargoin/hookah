@@ -2,15 +2,15 @@
     position: sticky;
     top: 0;
     left: 50%;
-    transition: background-color 0.4s, box-shadow 0.4s;
-    background-color: var(--background-hero);
+    transition: background-color var(--transition-time), box-shadow var(--transition-time);
+    background-color: var( --background-munsell);
     z-index: 10;
     &__container {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        transition: background-color 0.4s;
-        background-color: var(--background-hero);
+        transition: background-color var(--transition-time);
+        background-color: var( --background-munsell);
     }
     &__nav {
         max-width: 950px;
@@ -28,17 +28,17 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
-        color: var(--color-simple);
-        transition: color 0.4s;
+        color: var(--color-dark);
+        transition: color var(--transition-time);
         svg {
-            stroke: var(--color-simple);
+            stroke: var(--color-dark);
             margin-right: 5px;
-            transition: stroke 0.4s, transform 0.6s;
+            transition: stroke var(--transition-time), transform var(--transition-time);
         }
         &:hover {
-            color: var(--color-primary);
+            color: var(--color-blue);
             svg {
-                stroke: var(--color-primary);
+                stroke: var(--color-blue);
             }
         }
     }
@@ -48,16 +48,16 @@
         svg {
             margin-right: 0;
             &:hover {
-                stroke: var(--color-primary);
+                stroke: var(--color-blue);
             }
         }
         &-arrow {
             margin-left: 5px;  
         }
         &-active {
-            color: var(--color-primary);
+            color: var(--color-blue);
             svg {
-                stroke: var(--color-primary);
+                stroke: var(--color-blue);
             }
             .header__dropdown-arrow {
                 transform: rotate(180deg);

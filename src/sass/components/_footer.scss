@@ -1,7 +1,7 @@
 .footer {
     padding: 23px 0;
     margin-top: 50px;
-    background-color: #F2F6FA;
+    background-color: var(--background-alice-blue);
     &__top,
     &__bottom {
         display: flex;
@@ -25,7 +25,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
-        color: #5C5C6D;
+        color: var(--color-dark-grey);
         transition: color 0.4s;
         &-tg {
             display: flex;
@@ -33,7 +33,7 @@
             font-weight: 400;
             font-size: 12px;
             line-height: 14px;
-            color: #28A8E9;
+            color: var(--color-tg);
             svg {
                 margin-right: 10px;
             }
@@ -42,21 +42,21 @@
             }
         }
         &:hover {
-            color: var(--color-primary);
+            color: var(--color-blue);
         }
     }
     &__copyright {
         font-weight: 400;
         font-size: 12px;
         line-height: 14px;
-        color: #5C5C6D;
+        color: var(--color-dark-grey);
     }
     &__links {
         a {
             font-weight: 400;
             font-size: 12px;
             line-height: 14px;
-            color: #A1C4FD;
+            color: var(--color-blue);
             &:first-child {
                 margin-right: 60px;
             }

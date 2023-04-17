@@ -10,9 +10,9 @@
             line-height: 12px;
             text-align: center;
             text-transform: uppercase;
-            color: #FFFFFF;
-            background-color: var(--color-primary);
-            border-radius: 50px;
+            color: var(--color-white);
+            background-color: var(--color-blue);
+            border-radius: var(--radius-tag);
         }
         &-title {
             margin-top: 5px;
@@ -22,7 +22,7 @@
             color: #010624;
         }
         &-list {
-            border-top: 1px solid #EDECEF;
+            border-top: var(--border-grey);
             padding-top: 21px;
             margin-top: 21px;
             li {
@@ -41,7 +41,7 @@
                 font-weight: 700;
                 font-size: 15px;
                 line-height: 18px;
-                color: var(--color-primary);
+                color: var(--color-blue);
             }
         }
     }

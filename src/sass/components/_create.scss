@@ -22,7 +22,7 @@
         font-size: 64px;
         line-height: 76px;
         text-align: left;
-        color: var(--color-simple);
+        color: var(--color-dark);
         z-index: 5;
         @include decorate-title;
     }
@@ -32,7 +32,7 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 150%;
-        color: #5C5C6D;
+        color: var(--color-gray);
     }
 
     &__link {
@@ -41,7 +41,7 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 24px;
-        color: var(--color-primary);
+        color: var(--color-blue);
         display: flex;
         align-items: center;
         svg {

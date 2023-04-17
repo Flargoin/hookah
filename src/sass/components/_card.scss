@@ -4,13 +4,12 @@
     padding-bottom: 20px;
     max-width: 275px;
     width: 100%;
-    border-radius: 8px;
+    border-radius: var(--radius-card);
     overflow: hidden;
-    background: #FFFFFF;
+    background: var(--background-main);
     transition: box-shadow 0.4s, transform 0.4s;
     &__content {
         padding: 0 15px;
-        height: 100%;
     }
     &__img {
         width: 100%;
@@ -21,14 +20,14 @@
         font-weight: 700;
         font-size: 14px;
         text-transform: uppercase;
-        color: var(--color-primary);
+        color: var(--color-blue);
     }
     &__descr {
         font-weight: 400;
         font-size: 20px;
-        color: #000000;
+        color: var(--color-dark);
     }
-    &__taste {
+    &__info {
         padding-top: 9px;
         margin-top: 17px;
         display: flex;
@@ -37,7 +36,7 @@
         border-top: 1px solid #EDECEF;
     }
     &:hover { 
-        box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.05);
+        box-shadow: var(--shadow-card);
         transform: scale(1.05);
     }
 }

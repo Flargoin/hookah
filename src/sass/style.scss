@@ -61,26 +61,9 @@ svg {
     fill: transparent;
 }
 
-.divider {
-    width: 60px;
-    height: 1px;
-    background-color: #9CABFF;
-    margin: 23px auto 0 auto;
-}
-.more {
-    position: absolute;
-    top: 6px;
-    right: 0;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
-    color: var(--color-primary);
-    &:hover {
-        text-decoration: underline;
-    }
-}
 @import 'components/title.scss';
 @import 'components/btn.scss';
+@import 'components/other.scss';
 @import 'components/header.scss';
 @import 'components/dropdown.scss';
 @import 'components/hero.scss';

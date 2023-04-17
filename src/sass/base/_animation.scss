@@ -25,10 +25,12 @@
     0% {
         position: relative;
         left: -100%;
+        opacity: 0;
     }
     100% {
         position: relative;
         left: 0;
+        opacity: 1;
     }
 }
 
@@ -36,9 +38,11 @@
     0% {
         position: relative;
         right: -100%;
+        opacity: 0;
     }
     100% {
         position: relative;
         right: 0;
+        opacity: 1;
     }
 }

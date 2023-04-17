@@ -1,0 +1,18 @@
+.divider {
+    width: 60px;
+    height: 1px;
+    background-color: var( --background-blue);
+    margin: 23px auto 0 auto;
+}
+.more {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--color-blue);
+    &:hover {
+        text-decoration: underline;
+    }
+}
