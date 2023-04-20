@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Библиотеки и надстройки */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -337,28 +339,47 @@ template {
   display: none;
 }
 
+/* Шрифты, переменные, миксины, анимации */
+/*
+    Нужны ли отдельные файлы
+        Лучше описывать компоненты в отдельных файлах
+
+    Нужны ли отдельные классы
+        Да
+
+    Нужны ли сами миксины
+        Да но только для дополнения основных элементов
+*/
 @font-face {
   font-family: "TT Norms";
   src: url("TTNorms-Bold.eot");
   src: local("./fonts/TT Norms Bold"), local("TTNorms-Bold"), url("./fonts/TTNorms-Bold.eot?#iefix") format("embedded-opentype"), url("./fonts/TTNorms-Bold.woff2") format("woff2"), url("./fonts/TTNorms-Bold.woff") format("woff"), url("./fonts/TTNorms-Bold.ttf") format("truetype");
   font-weight: bold;
+  font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "TT Norms";
-  src: url("./fonts/TTNorms-Regular.eot");
-  src: local("TT Norms Regular"), local("TTNorms-Regular"), url("./fonts/TTNorms-Regular.eot?#iefix") format("embedded-opentype"), url("./fonts/TTNorms-Regular.woff2") format("woff2"), url("./fonts/TTNorms-Regular.woff") format("woff"), url("./fonts/TTNorms-Regular.ttf") format("truetype");
+  src: url("TTNorms-Regular.eot");
+  src: local("./fonts/TT Norms Bold"), local("TTNorms-Bold"), url("./fonts/TTNorms-Regular.eot?#iefix") format("embedded-opentype"), url("./fonts/TTNorms-Regular.woff2") format("woff2"), url("./fonts/TTNorms-Regular.woff") format("woff"), url("./fonts/TTNorms-Regular.ttf") format("truetype");
   font-weight: normal;
+  font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "TT Norms";
-  src: url("./fonts/TTNorms-Black.eot");
-  src: local("TT Norms Black"), local("TTNorms-Black"), url("./fonts/TTNorms-Black.eot?#iefix") format("embedded-opentype"), url("./fonts/TTNorms-Black.woff2") format("woff2"), url("./fonts/TTNorms-Black.woff") format("woff"), url("./fonts/TTNorms-Black.ttf") format("truetype");
+  src: url("TTNorms-Black.eot");
+  src: local("./fonts/TT Norms Bold"), local("TTNorms-Bold"), url("./fonts/TTNorms-Black.eot?#iefix") format("embedded-opentype"), url("./fonts/TTNorms-Black.woff2") format("woff2"), url("./fonts/TTNorms-Black.woff") format("woff"), url("./fonts/TTNorms-Black.ttf") format("truetype");
   font-weight: 900;
+  font-display: swap;
   font-style: normal;
 }
 :root {
+  /*  Base */
+  --font-family: "TT Norms", sans-serif;
+  --content-width: 1080px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   /* Color */
   --color-blue: #A1C4FD;
   --color-grey: #868686;
@@ -376,9 +397,9 @@ template {
   --background-blue: #A1C4FD;
   --background-isabelline: #EDECEF;
   /* Border color */
+  --border-white: 1px solid #FFFFFF;
   --border-grey: 1px solid #EDECEF;
-  /* Font */
-  --font-main: "TT Norms", sans-serif;
+  --border-blue: 1px solid #A1C4FD;
   /* Shadow Box */
   --shadow-card: 0px 10px 16px rgba(0, 0, 0, 0.05);
   /* Border radius */
@@ -388,6 +409,19 @@ template {
   --radius-btn: 4px;
   /* Transition */
   --transition-time: 0.6s;
+  /* z-index */
+  --ui-index-1: 1;
+  /* Для наползающих элементов в общем потоке */
+  --ui-index-2: 2;
+  /* Для наползающих элементов в общем потоке */
+  --ui-index-3: 3;
+  /* Для оверлеев */
+  --ui-index-4: 4;
+  /* Для сайдбаров */
+  --ui-index-5: 5;
+  /* Для модалок */
+  --ui-index-6: 6;
+  /* Для элементов прекрывающих всё */
 }
 
 /* Smoke */
@@ -434,10 +468,17 @@ template {
     opacity: 1;
   }
 }
-* {
+/* База */
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 html,
@@ -446,7 +487,7 @@ body {
 }
 
 body {
-  font-family: "TT Norms", sans-serif;
+  font-family: var(--font-family);
 }
 
 .wrapper {
@@ -455,40 +496,70 @@ body {
   flex-direction: column;
 }
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
 .main {
   flex-grow: 1;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 ul {
-  list-style-type: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 svg {
   fill: transparent;
 }
 
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+}
+input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+/* Компоненты */
 .title {
   font-weight: 400;
   font-size: 24px;
@@ -513,7 +584,7 @@ svg {
 .btn:hover {
   color: var(--color-blue);
   background-color: transparent;
-  border: 1px solid var(--background-blue);
+  border: var(--border-blue);
 }
 
 .divider {
@@ -536,6 +607,78 @@ svg {
   text-decoration: underline;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  max-width: 255px;
+  width: 100%;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--background-main);
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+.card__content {
+  padding: 0 15px;
+}
+.card__title {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--color-blue);
+}
+.card__descr {
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--color-dark);
+}
+.card__info {
+  padding-top: 9px;
+  margin-top: 17px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: var(--border-grey);
+}
+.card__rating {
+  display: flex;
+  align-items: center;
+}
+.card:hover {
+  box-shadow: var(--shadow-card);
+  transform: scale(1.05);
+}
+
+.tag {
+  display: block;
+  margin-top: 5px;
+  padding: 5px 10px;
+  margin-left: 8px;
+  background-color: var(--background-alice-blue);
+  border-radius: var(--radius-tag);
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: var(--color-grey);
+}
+.tag--blue {
+  background-color: var(--background-blue);
+}
+.tag--rating {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-white);
+  border-radius: var(--border-reset);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--color-blue);
+}
+.tag--rating svg {
+  margin-right: 5px;
+}
+
+/* Блоки */
 .header {
   position: sticky;
   top: 0;
@@ -747,7 +890,7 @@ svg {
   background-color: var(--background-munsell);
 }
 .hero__container {
-  max-width: 992px;
+  max-width: 1020px;
   height: 100%;
   margin: 0 auto;
 }
@@ -899,62 +1042,6 @@ svg {
   z-index: -1;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20px;
-  max-width: 275px;
-  width: 100%;
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  background: var(--background-main);
-  transition: box-shadow 0.4s, transform 0.4s;
-}
-.card__content {
-  padding: 0 15px;
-}
-.card__img {
-  width: 100%;
-  height: 248px;
-  object-fit: contain;
-}
-.card__title {
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: var(--color-blue);
-}
-.card__descr {
-  font-weight: 400;
-  font-size: 20px;
-  color: var(--color-dark);
-}
-.card__info {
-  padding-top: 9px;
-  margin-top: 17px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  border-top: 1px solid #EDECEF;
-}
-.card:hover {
-  box-shadow: var(--shadow-card);
-  transform: scale(1.05);
-}
-
-.tag {
-  display: block;
-  margin-top: 5px;
-  padding: 5px 10px;
-  margin-left: 8px;
-  background: var(--background-alice-blue);
-  border-radius: var(--radius-tag);
-  font-weight: 400;
-  font-size: 14px;
-  text-align: center;
-  color: var(--color-grey);
-}
-
 .tobacco {
   padding-top: 207px;
   padding-bottom: 42px;
@@ -1093,9 +1180,6 @@ svg {
 .launge__item-content {
   margin-top: 25px;
 }
-.launge__item-img {
-  height: 285px;
-}
 .launge__item-position {
   color: var(--color-red);
 }
@@ -1107,7 +1191,7 @@ svg {
 }
 .launge__item-info {
   justify-content: space-between;
-  border-top: 1px solid var(--background-white);
+  border-top: var(--border-white);
 }
 .launge__item-price {
   font-weight: 400;
@@ -1118,26 +1202,6 @@ svg {
 .launge__item-price span {
   font-weight: 700;
   color: var(--color-blue);
-}
-.launge__item-rating {
-  display: flex;
-  align-items: center;
-}
-.launge__item-rating div {
-  padding: 5px 10px;
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 18px;
-  color: var(--color-blue);
-  background-color: var(--background-white);
-}
-.launge__item-rating div svg {
-  margin-right: 7px;
-}
-.launge__item-rating div:last-child {
-  margin-left: 5px;
 }
 
 .footer {

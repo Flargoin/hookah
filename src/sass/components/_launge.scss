@@ -16,9 +16,6 @@
         &-content {
             margin-top: 25px;
         }
-        &-img {
-            height: 285px;
-        }
         &-position {
             color: var(--color-red);
             svg {
@@ -30,7 +27,7 @@
         }
         &-info {
             justify-content: space-between;
-            border-top: 1px solid var(--background-white);
+            border-top: var(--border-white);
         }
         &-price {
             font-weight: 400;
@@ -40,26 +37,6 @@
             span {
                 font-weight: 700;
                 color: var(--color-blue);
-            }
-        }
-        &-rating {
-            display: flex;
-            align-items: center;
-            div {
-                padding: 5px 10px;
-                display: flex;
-                align-items: center;
-                font-weight: 700;
-                font-size: 15px;
-                line-height: 18px;
-                color: var(--color-blue);
-                background-color: var(--background-white);
-                svg {
-                    margin-right: 7px;
-                }
-                &:last-child {
-                    margin-left: 5px;
-                }
             }
         }
     }

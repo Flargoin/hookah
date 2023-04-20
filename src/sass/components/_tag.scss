@@ -3,11 +3,29 @@
     margin-top: 5px;
     padding: 5px 10px;
     margin-left: 8px;
-    background: var( --background-alice-blue);
+    background-color: var( --background-alice-blue);
     border-radius: var(--radius-tag);
 
     font-weight: 400;
     font-size: 14px;
     text-align: center;
     color: var(--color-grey);
+    &--rating {
+        display: flex;
+        align-items: center;
+        background-color: var( --background-white);
+        border-radius: var(--border-reset);
+
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        color: var(--color-blue);
+        svg {
+            margin-right: 5px;
+        }
+    }
+
+    &--blue {
+        background-color: var(--background-blue);
+    }
 }

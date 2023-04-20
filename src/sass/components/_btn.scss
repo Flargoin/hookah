@@ -13,6 +13,6 @@
     &:hover {
         color: var(--color-blue);
         background-color: transparent;
-        border: 1px solid var( --background-blue);
+        border: var( --border-blue);
     }
 }
