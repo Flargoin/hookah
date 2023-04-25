@@ -1,7 +1,26 @@
 .title {
-    font-weight: 400;
+  font-weight: 400;
+
+  /* Для заголовков секций */
+  &--h2 {
     font-size: 24px;
     line-height: 28px;
     text-align: center;
     color: var(--color-dark);
+  }
+
+  /* Для названия товара в карточке (или локации) */
+  &--h3 {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--color-blue);
+  }
+
+  /* Для именнования в карточке (вкус товара или местоположение заведения) */
+  &--h4 {
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-dark);
+  }
 }

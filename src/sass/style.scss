@@ -1,29 +1,29 @@
 /* Библиотеки и надстройки */
-@import 'lib/normalize.scss';
+@import "lib/normalize";
 
 /* Шрифты, переменные, миксины, анимации */
-@import 'mixins.scss';
-@import 'fonts.scss';
-@import 'variables.scss';
-@import 'animation.scss';
+@import "mixins";
+@import "fonts";
+@import "variables";
+@import "animation";
 
 /* База */
-@import 'settings.scss';
+@import "settings";
 
 /* Компоненты */
-@import 'components/title.scss';
-@import 'components/btn.scss';
-@import 'components/other.scss';
-@import 'components/card.scss';
-@import 'components/tag.scss';
-
+@import "components/title";
+@import "components/btn";
+@import "components/links";
+@import "components/other";
+@import "components/card";
+@import "components/tag";
 
 /* Блоки */
-@import 'components/header.scss';
-@import 'components/dropdown.scss';
-@import 'components/hero.scss';
-@import 'components/tobacco.scss';
-@import 'components/create.scss';
-@import 'components/mix.scss';
-@import 'components/launge.scss';
-@import 'components/footer.scss';
+@import "blocks/header";
+@import "blocks/dropdown";
+@import "blocks/hero";
+@import "blocks/tobacco";
+@import "blocks/create";
+@import "blocks/mix";
+@import "blocks/launge";
+@import "blocks/footer";

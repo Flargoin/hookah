@@ -1,0 +1,22 @@
+.tobacco {
+  padding-top: 207px;
+  padding-bottom: 42px;
+  height: 100%;
+
+  &__container {
+    position: relative;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-top: 33px;
+  }
+
+  &__item {
+    &-img {
+      object-fit: contain;
+    }
+  }
+}

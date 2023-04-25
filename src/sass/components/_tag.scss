@@ -1,31 +1,31 @@
 .tag {
-    display: block;
-    margin-top: 5px;
-    padding: 5px 10px;
-    margin-left: 8px;
-    background-color: var( --background-alice-blue);
-    border-radius: var(--radius-tag);
+  display: block;
+  margin-top: 5px;
+  margin-left: 8px;
+  border-radius: var(--radius-tag);
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: var(--color-grey);
+  background-color: var(--background-alice-blue);
 
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    color: var(--color-grey);
-    &--rating {
-        display: flex;
-        align-items: center;
-        background-color: var( --background-white);
-        border-radius: var(--border-reset);
+  &--blue {
+    background-color: var(--background-blue);
+  }
 
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 18px;
-        color: var(--color-blue);
-        svg {
-            margin-right: 5px;
-        }
+  &--rating {
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-reset);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--color-blue);
+    background-color: var(--background-white);
+
+    svg {
+      margin-right: 5px;
     }
-
-    &--blue {
-        background-color: var(--background-blue);
-    }
+  }
 }

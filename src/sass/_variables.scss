@@ -1,50 +1,56 @@
 :root {
-    /*  Base */
-    --font-family: 'TT Norms', sans-serif;
-    --content-width: 1080px;
-    --container-offset: 15px;
-    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  /*  Base */
+  --font-family: "TT Norms", sans-serif;
+  --content-width: 1110px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
-    /* Color */
-    --color-blue: #A1C4FD;
-    --color-grey: #868686;
-    --color-dark: #010624;
-    --color-silver: #C4C4C4;
-    --color-white: #FFFFFF;
-    --color-dark-grey: #5C5C6D;
-    --color-red: #FF0013;
-    --color-tg: #28A8E9;
+  /* Color */
+  --color-blue: #a1c4fd;
+  --color-grey: #868686;
+  --color-dark: #010624;
+  --color-silver: #c4c4c4;
+  --color-white: #fff;
+  --color-dark-grey: #5c5c6d;
+  --color-red: #ff0013;
+  --color-tg: #28a8e9;
 
-    /* Background color */
-    --background-white: #FFFFFF;
-    --background-dark: #010624;
-    --background-alice-blue: #F2F6FA;
-    --background-munsell: #ECF2F8;
-    --background-blue: #A1C4FD;
-    --background-isabelline: #EDECEF;
+  /* Background color */
+  --background-white: #fff;
+  --background-dark: #010624;
+  --background-alice-blue: #f2f6fa;
+  --background-munsell: #ecf2f8;
+  --background-blue: #a1c4fd;
+  --background-isabelline: #edecef;
 
-    /* Border color */
-    --border-white: 1px solid #FFFFFF;
-    --border-grey: 1px solid #EDECEF;
-    --border-blue: 1px solid #A1C4FD;
+  /* Border color */
+  --border-white: 1px solid #fff;
+  --border-grey: 1px solid #edecef;
+  --border-blue: 1px solid #f1c4fd;
 
-    /* Shadow Box */
-    --shadow-card: 0px 10px 16px rgba(0, 0, 0, 0.05);
-    
-    /* Border radius */
-    --radius-reset: 0;
-    --radius-card: 8px;
-    --radius-tag: 50px;
-    --radius-btn: 4px;
+  /* Shadow Box */
+  --shadow-card: 0px 10px 16px rgba(0, 0, 0, 5%);
 
-    /* Transition */
-    --transition-time: 0.6s; // Для всего
+  /* Border radius */
+  --radius-reset: 0;
+  --radius-card: 8px;
+  --radius-tag: 50px;
+  --radius-btn: 4px;
 
-    /* z-index */
-    --ui-index-1: 1; /* Для наползающих элементов в общем потоке */
-    --ui-index-2: 2; /* Для наползающих элементов в общем потоке */
-    --ui-index-3: 3; /* Для оверлеев */
-    --ui-index-4: 4; /* Для сайдбаров */
-    --ui-index-5: 5; /* Для модалок */
-    --ui-index-6: 6; /* Для элементов прекрывающих всё */
+  /* Transition */
+  --transition-time: 0.6s; // Для всего
+
+  /* z-index */
+  --ui-index-1: 1;
+  /* Для наползающих элементов в общем потоке */
+  --ui-index-2: 2;
+  /* Для наползающих элементов в общем потоке */
+  --ui-index-3: 3;
+  /* Для оверлеев */
+  --ui-index-4: 4;
+  /* Для сайдбаров */
+  --ui-index-5: 5;
+  /* Для модалок */
+  --ui-index-6: 6;
+  /* Для элементов прекрывающих всё */
 }

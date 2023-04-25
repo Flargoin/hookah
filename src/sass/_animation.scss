@@ -1,0 +1,50 @@
+@keyframes smoke-scale {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.7) translateX(-50%) rotate(25deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.1) translateX(-50%) rotate(0deg);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Hero text */
+@keyframes left-to-right-text {
+  0% {
+    position: relative;
+    left: -100%;
+    opacity: 0;
+  }
+
+  100% {
+    position: relative;
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes right-to-left-text {
+  0% {
+    position: relative;
+    right: -100%;
+    opacity: 0;
+  }
+
+  100% {
+    position: relative;
+    right: 0;
+    opacity: 1;
+  }
+}

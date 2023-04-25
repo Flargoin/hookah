@@ -1,10 +1,9 @@
 @import "./mixins/font-face";
+@import "./mixins/breakpoints";
 
 @mixin decorate-title {
-    svg {
-        position: absolute;
-        top: 0;
-        left: -5px;
-        z-index: -1;
-    }
+  position: absolute;
+  left: -5px;
+  top: 0;
+  z-index: -1;
 }

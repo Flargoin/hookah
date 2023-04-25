@@ -1,18 +1,19 @@
 .btn {
-    padding: 12px 0;
-    width: 160px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    color: var(--color-white);
-    background: var( --background-blue);
-    border-radius: var(--radius-btn);
-    border: 1px solid transparent;
-    transition: color var(--transition-time), background-color var(--transition-time), border var(--transition-time);
-    cursor: pointer;
-    &:hover {
-        color: var(--color-blue);
-        background-color: transparent;
-        border: var( --border-blue);
-    }
+  border: 1px solid transparent;
+  border-radius: var(--radius-btn);
+  padding: 12px 0;
+  width: 160px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--color-white);
+  background-color: var(--background-blue);
+  transition: color var(--transition-time), background-color var(--transition-time), border var(--transition-time);
+  cursor: pointer;
+
+  &:hover {
+    border: var(--border-blue);
+    color: var(--color-blue);
+    background-color: transparent;
+  }
 }
